@@ -1,0 +1,1000 @@
+===============================================================================
+Name: gutenprint-5_2_3
+
+2008-12-22	<rlk@sourceforge.net>
+
+	Files:	po/cs.po (1.55) (+3374 -3236)
+		po/da.po (1.96) (+3376 -3234)
+		po/de.po (1.69) (+3371 -3235)
+		po/el.po (1.70) (+3374 -3236)
+		po/en_GB.po (1.163) (+3376 -3234)
+		po/es.po (1.68) (+3374 -3236)
+		po/fr.po (1.96) (+3376 -3234)
+		po/hu.po (1.27) (+3376 -3234)
+		po/it.po (1.5) (+3376 -3234)
+		po/ja.po (1.64) (+3374 -3236)
+		po/nb.po (1.29) (+3375 -3235)
+		po/nl.po (1.79) (+3376 -3234)
+		po/pl.po (1.74) (+3374 -3236)
+		po/pt.po (1.69) (+3374 -3236)
+		po/sk.po (1.73) (+3374 -3236)
+		po/sv.po (1.99) (+3375 -3235)
+		po/zh_TW.po (1.29) (+3374 -3234)
+
+	Gutenprint 5.2.3 release
+
+2008-12-21	<rlk@sourceforge.net>
+
+	Files:	src/escputil/d4lib.c (1.11) (+147 -25)
+		src/escputil/d4lib.h (1.5) (+5 -1)
+		src/escputil/escputil.c (1.99) (+63 -103)
+
+	Fix escputil for NX100 (needs code review)
+
+2008-12-21	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.409) (+4 -0)
+
+	Add support for Canon MP220 and iP4600.
+
+2008-12-21	<faust3@sourceforge.net>
+
+	Files:	src/main/canon-printers.h (1.49) (+1 -1)
+
+	also enable the iP4600 specific paper list
+
+2008-12-21	<faust3@sourceforge.net>
+
+	Files:	src/main/canon-media.h (1.12) (+47 -24)
+
+	Added an iP4600 paper list and also added another paper specific value for the P command
+	patch by Richard Collins <the.hungarian at gmail.com>
+
+2008-12-21	<faust3@sourceforge.net>
+
+	Files:	src/main/canon-media.h (1.11) (+9 -0)
+		src/main/canon-printers.h (1.48) (+1 -1)
+
+	Added an iP4600 specific slot list
+	patch by Richard Collins <the.hungarian at gmail.com>
+
+2008-12-21	<faust3@sourceforge.net>
+
+	Files:	test/pixma_parse.c (1.15) (+1 -1)
+
+	Avoid division by zero when bpp is 0
+	patch by Richard Collins <the.hungarian at gmail.com>
+
+2008-12-21	<faust3@sourceforge.net>
+
+	Files:	src/main/canon-inks.h (1.23) (+105 -0)
+
+	Added support for a few more inksets that are required for better iP4600 support
+	patch by
+	Richard Collins <the.hungarian at gmail.com>
+
+2008-12-21	<faust3@sourceforge.net>
+
+	Files:	src/foomatic/foomatic-printermap (1.184) (+1 -0)
+		src/main/canon-printers.h (1.47) (+56 -0)
+		src/main/print-canon.c (1.230) (+9 -9)
+		src/xml/printers.xml (1.28) (+2 -1)
+
+	Initial support for the Canon PIXMA iP4600
+	patch by Bernd Ernesti <veego at users.sourceforge.net>
+	(#2447389)
+
+2008-12-21	<faust3@sourceforge.net>
+
+	Files:	src/foomatic/foomatic-printermap (1.183) (+1 -0)
+		src/xml/printers.xml (1.27) (+2 -1)
+
+	According to Alec de Zegher <alec at alecweb.be> the MP220 works with
+	the MP180 driver.
+
+2008-12-21	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.408) (+33 -21)
+		README (1.199) (+13 -13)
+		configure.ac (1.209) (+4 -4)
+
+	Bump version
+
+2008-12-20	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.407) (+7 -4)
+		src/xml/escp2/media/Makefile.am (1.10) (+2 -1)
+		src/xml/escp2/media/nx100.xml (1.1) (added)
+		src/xml/escp2/model/model_94.xml (1.3) (+17 -17)
+
+	Fix Epson NX100 and related printers
+
+2008-12-17	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.406) (+3 -1)
+		src/xml/printers.xml (1.26) (+1 -3)
+
+	Epson has confirmed that S20 is equivalent to C79/C68.
+
+2008-12-15	<rlk@sourceforge.net>
+
+	Files:	src/xml/printers.xml (1.25) (+5 -3)
+
+	Change driver for S20/T20 to C68 rather than NX100, based on report by
+	Henning Paul.
+
+2008-12-12	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.405) (+4 -4)
+
+	Add a few more printers to the NX100 equivalence class.
+
+2008-12-12	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.404) (+3 -3)
+		README (1.198) (+13 -13)
+		configure.ac (1.208) (+3 -3)
+
+	Prep for snapshot release
+
+2008-12-12	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.403) (+14 -6)
+		src/foomatic/foomatic-printermap (1.182) (+13 -0)
+		src/xml/escp2/model/model_94.xml (1.2) (+12 -45)
+		src/xml/printers.xml (1.24) (+17 -4)
+
+	Correct (on specification) support for the Epson NX100 and friends.
+
+	Add support for the PM-A940 and PM-T960 based on the RX680.
+
+2008-12-11	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.402) (+26 -0)
+
+	Update release notes for next release.
+
+2008-12-10	<rlk@sourceforge.net>
+
+	Files:	src/xml/escp2/inputslots/Makefile.am (1.5) (+2 -1)
+		src/xml/escp2/inputslots/rx680.xml (1.1) (added)
+		src/xml/escp2/model/Makefile.am (1.14) (+3 -2)
+		src/xml/escp2/model/model_97.xml (1.1) (added)
+
+	First cut at RX680
+
+2008-12-10	<rlk@sourceforge.net>
+
+	Files:	src/cups/test-rastertogutenprint.in (1.16) (+4 -0)
+
+	Try "whence" in addition to "type" to find pdftops.
+
+2008-12-09	<rlk@sourceforge.net>
+
+	Files:	src/xml/escp2/inputslots/Makefile.am (1.4) (+2 -1)
+		src/xml/escp2/inputslots/artisan.xml (1.1) (added)
+		src/xml/escp2/model/model_96.xml (1.3) (+3 -3)
+
+	Make duplex and print to CD work on Artisan printers
+
+2008-12-07	<rlk@sourceforge.net>
+
+	Files:	src/testpattern/testpatterny.y (1.33) (+2 -1)
+		src/xml/escp2/inks/Makefile.am (1.7) (+2 -1)
+		src/xml/escp2/inks/artisan.xml (1.1) (added)
+		src/xml/escp2/model/model_96.xml (1.2) (+26 -35)
+
+	Initial tuning for Artisan printers
+
+2008-12-05	<rlk@sourceforge.net>
+
+	Files:	src/escputil/escputil.c (1.98) (+14 -7)
+
+	Fix some error handling and debug printout cases.
+
+	Do not attempt to change the read/write mode via fcntl (on Solaris
+	you're not supposed to pass those flags to fcntl).
+
+2008-12-05	<easysw@sourceforge.net>
+
+	Files:	src/cups/genppd.c (1.171) (+21 -21)
+
+	In main() for the CUPS driver interface, force the locale to "C" (POSIX) before
+	calling stp_init(), which calls setlocale() but probably shouldn't.
+
+	Always localize dimension choices, and add a localizable string for it so
+	we can use something other than "%.1f mm" as needed.
+
+2008-11-22	<rlk@sourceforge.net>
+
+	Files:	src/main/print-escp2.c (1.416) (+1 -7)
+
+	Remove spurious debug comment introduced by last commit.
+
+2008-11-22	<rlk@sourceforge.net>
+
+	Files:	src/main/print-escp2-data.c (1.271) (+15 -3)
+		src/main/print-escp2.c (1.415) (+44 -1)
+		src/main/print-escp2.h (1.133) (+7 -2)
+		src/xml/escp2/model/model_87.xml (1.15) (+3 -2)
+
+	Allow extended margins with duplex printers when duplex not in use
+
+2008-11-16	<rlk@sourceforge.net>
+
+	Files:	src/xml/printers.xml (1.23) (+2 -2)
+
+	CX4900 needs to be corrected also.
+
+2008-11-15	<rlk@sourceforge.net>
+
+	Files:	src/cups/test-rastertogutenprint.in (1.15) (+1 -1)
+
+	Use gunzip -f to avoid noise about uncompressed PPD files that already exist.
+
+2008-11-15	<rlk@sourceforge.net>
+
+	Files:	src/cups/test-rastertogutenprint.in (1.14) (+3 -1)
+
+	Correctly use cgpdftoraster, and uncompress PPD files since not all
+	versions of CUPS can work with compressed PPDs.
+
+===============================================================================
+Name: gutenprint-5_2_2
+
+2008-11-15	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.401) (+8 -2)
+		src/foomatic/foomatic-printermap (1.181) (+3 -0)
+		src/xml/escp2/model/Makefile.am (1.13) (+3 -2)
+		src/xml/escp2/model/model_96.xml (1.1) (added)
+		src/xml/printers.xml (1.22) (+10 -7)
+
+	Fix definition of Artisan printers based on specs
+
+2008-11-15	<rlk@sourceforge.net>
+
+	Files:	src/cups/test-rastertogutenprint.in (1.13) (+2 -2)
+
+	Remove unnecessarily aggressive quoting.
+
+2008-11-14	<rlk@sourceforge.net>
+
+	Files:	po/it.po (1.4) (+2898 -2679)
+
+	Update translation
+
+2008-11-14	<rlk@sourceforge.net>
+
+	Files:	po/it.po (1.3) (+2686 -2905)
+
+	Fix translation from the translation service
+
+2008-11-14	<rlk@sourceforge.net>
+
+	Files:	src/cups/test-rastertogutenprint.in (1.12) (+13 -5)
+		src/testpattern/run-testpattern (1.25) (+10 -2)
+		src/testpattern/run-testpattern-1 (1.11) (+10 -2)
+		src/testpattern/run-testpattern-2.in (1.32) (+13 -2)
+		test/run-testdither (1.14) (+10 -2)
+		test/run-weavetest (1.28) (+10 -2)
+
+	Fix tests for VPATH builds
+
+2008-11-13	<rlk@sourceforge.net>
+
+	Files:	po/cs.po (1.54) (+1869 -1857)
+		po/da.po (1.95) (+1869 -1857)
+		po/de.po (1.68) (+1869 -1857)
+		po/el.po (1.69) (+1869 -1857)
+		po/en_GB.po (1.162) (+1869 -1857)
+		po/es.po (1.67) (+1869 -1857)
+		po/fr.po (1.95) (+1869 -1857)
+		po/hu.po (1.26) (+1869 -1857)
+		po/it.po (1.2) (+2898 -2679)
+		po/ja.po (1.63) (+1869 -1857)
+		po/nb.po (1.28) (+1869 -1857)
+		po/nl.po (1.78) (+1869 -1857)
+		po/pl.po (1.73) (+1869 -1857)
+		po/pt.po (1.68) (+1869 -1857)
+		po/sk.po (1.72) (+1869 -1857)
+		po/sv.po (1.98) (+1870 -1858)
+		po/zh_TW.po (1.28) (+1869 -1857)
+
+	Gutenprint 5.2.2 release
+
+2008-11-11	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.400) (+25 -5)
+
+	Update release notes.
+
+2008-11-11	<rlk@sourceforge.net>
+
+	Files:	configure.ac (1.207) (+3 -3)
+		po/it.po (1.1) (added)
+
+	Add Italian translation
+
+2008-11-10	<rlk@sourceforge.net>
+
+	Files:	src/xml/escp2/model/Makefile.am (1.12) (+2 -2)
+
+	Correct new model file.
+
+2008-11-10	<rlk@sourceforge.net>
+
+	Files:	src/foomatic/foomatic-printermap (1.180) (+1 -0)
+		src/xml/escp2/model/Makefile.am (1.11) (+2 -1)
+		src/xml/escp2/model/model_65.xml (1.13) (+4 -4)
+		src/xml/escp2/model/model_95.xml (1.1) (added)
+		src/xml/printers.xml (1.21) (+14 -13)
+
+	Correct printer definition for a number of Epson MFP devices
+
+2008-11-02	<rlk@sourceforge.net>
+
+	Files:	src/xml/escp2/model/model_91.xml (1.8) (+6 -6)
+
+	[ 2214593 ] Stylus Photo R1900 output unaligned
+
+2008-11-02	<rlk@sourceforge.net>
+
+	Files:	src/ghost/ijsgutenprint.c (1.22) (+2 -2)
+
+	[ 2217057 ] obvious error in ijsgutenprint.c
+
+2008-11-01	<rleigh@sourceforge.net>
+
+	Files:	src/xml/Makefile.am (1.4) (+3 -3)
+
+	src/xml/Makefile.am: Fix quoting issue in sed substitution
+	Remove removed file from CLEANFILES
+
+2008-10-29	<easysw@sourceforge.net>
+
+	Files:	src/escputil/escputil.c (1.97) (+7 -7)
+		src/main/channel.c (1.31) (+2 -2)
+		src/main/curve.c (1.54) (+16 -16)
+		src/main/escp2-channels.c (1.87) (+2 -2)
+		src/main/print-lexmark.c (1.158) (+2 -2)
+		src/main/print-weave.c (1.72) (+3 -3)
+		src/main/sequence.c (1.27) (+4 -4)
+
+	Fix 64-bit compile problems - %d doesn't work with size_t, so instead use
+	%ld and casts to long.
+
+2008-10-24	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.399) (+10 -111)
+		README (1.197) (+7 -7)
+
+	Advance version
+
+2008-10-24	<rlk@sourceforge.net>
+
+	Files:	configure.ac (1.206) (+3 -3)
+
+	Bump version.
+
+2008-10-24	<rleigh@sourceforge.net>
+
+	Files:	Makefile.am (1.155) (+15 -15)
+		include/gutenprintui2/Makefile.am (1.4) (+4 -3)
+		src/foomatic/Makefile.am (1.52) (+4 -2)
+		src/gutenprintui2/Makefile.am (1.8) (+4 -3)
+		src/xml/Makefile.am (1.3) (+10 -8)
+		src/xml/escp2/Makefile.am (1.8) (+11 -10)
+		src/xml/escp2/inks/Makefile.am (1.6) (+6 -5)
+		src/xml/escp2/inputslots/Makefile.am (1.3) (+6 -5)
+		src/xml/escp2/media/Makefile.am (1.9) (+6 -5)
+		src/xml/escp2/mediasizes/Makefile.am (1.3) (+6 -5)
+		src/xml/escp2/model/Makefile.am (1.10) (+6 -5)
+		src/xml/escp2/qualitypresets/Makefile.am (1.3) (+6 -5)
+		src/xml/escp2/weaves/Makefile.am (1.2) (+6 -5)
+
+	Fix VPATH build
+
+	Correct use of srcdir and builddir in XML data directories.
+	All Makefiles use temporary files when using shell I/O redirection to files,
+	so make behaves idempotently on failure (the target is only created on
+	success).
+
+2008-10-24	<rlk@sourceforge.net>
+
+	Files:	src/xml/printers.xml (1.20) (+1 -2)
+
+	Remove duplicate entry.
+
+===============================================================================
+Name: gutenprint-5_2_1
+
+2008-10-19	<rlk@sourceforge.net>
+
+	Files:	po/cs.po (1.53) (+2747 -2447)
+		po/da.po (1.94) (+2745 -2448)
+		po/de.po (1.67) (+2738 -2447)
+		po/el.po (1.68) (+2747 -2447)
+		po/en_GB.po (1.161) (+2749 -2447)
+		po/es.po (1.66) (+2747 -2447)
+		po/fr.po (1.94) (+2749 -2447)
+		po/hu.po (1.25) (+2749 -2447)
+		po/ja.po (1.62) (+2747 -2447)
+		po/nb.po (1.27) (+2749 -2447)
+		po/nl.po (1.77) (+2745 -2448)
+		po/pl.po (1.72) (+2747 -2447)
+		po/pt.po (1.67) (+2747 -2447)
+		po/sk.po (1.71) (+2747 -2447)
+		po/sv.po (1.97) (+2750 -2448)
+		po/zh_TW.po (1.27) (+2747 -2447)
+
+	Gutenprint 5.2.1 release
+
+2008-10-19	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.398) (+1 -1)
+		configure.ac (1.205) (+4 -4)
+
+	Fix release that didn't get bumped.
+
+2008-10-19	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.397) (+2 -2)
+		README (1.196) (+15 -15)
+		configure.ac (1.204) (+4 -4)
+
+	Prep for 5.2.1 release
+
+2008-10-19	<rlk@sourceforge.net>
+
+	Files:	po/da.po (1.93) (+1209 -1122)
+		po/nl.po (1.76) (+1243 -1137)
+
+	Update Danish, Dutch translation
+
+2008-10-19	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.396) (+141 -19)
+		doc/gutenprint-users-manual.odt (1.5) (+356 -472)
+		doc/gutenprint-users-manual.pdf (1.5) (+3820 -2943)
+		src/foomatic/foomatic-generator.in (1.66) (+5 -4)
+		src/foomatic/foomatic-printermap (1.179) (+49 -0)
+		src/foomatic/printers.c (1.13) (+3 -1)
+		src/xml/escp2/inks/Makefile.am (1.5) (+4 -1)
+		src/xml/escp2/inks/nx100.xml (1.1) (added)
+		src/xml/escp2/inks/wf40.xml (1.1) (added)
+		src/xml/escp2/inks/wf500.xml (1.1) (added)
+		src/xml/escp2/media/Makefile.am (1.8) (+2 -1)
+		src/xml/escp2/media/c120.xml (1.12) (+48 -0)
+		src/xml/escp2/media/wf500.xml (1.1) (added)
+		src/xml/escp2/model/Makefile.am (1.9) (+4 -2)
+		src/xml/escp2/model/model_92.xml (1.2) (+108 -44)
+		src/xml/escp2/model/model_93.xml (1.1) (added)
+		src/xml/escp2/model/model_94.xml (1.1) (added)
+		src/xml/escp2/qualitypresets/Makefile.am (1.2) (+3 -2)
+		src/xml/escp2/qualitypresets/wf40.xml (1.1) (added)
+		src/xml/printers.xml (1.19) (+51 -1)
+		test/run-weavetest (1.27) (+3 -3)
+
+	   1) Preliminary support for the following printers.  These printers
+	      may be retuned for improved quality or performance in future
+	      releases.
+
+	      Epson inkjet printers:
+
+		Epson PictureMate 215
+		Epson PX 101
+		Epson PX 201
+		Epson PX 601F
+		Epson Stylus CX9300F
+		Epson Stylus CX9400F
+		Epson Stylus CX9475F
+		Epson Stylus DX9400F
+		Epson Stylus NX200
+		Epson Stylus NX400
+		Epson Stylus Photo R290
+		Epson Stylus Photo RX610
+		Epson Stylus Photo RX690
+		Epson Stylus Office B30
+		Epson Stylus Office B33
+		Epson Stylus Office B40W
+		Epson Stylus Office T30
+		Epson Stylus Office T33
+		Epson Stylus Office T40W
+		Epson Stylus Office BX300F
+		Epson Stylus Office BX600FW
+		Epson Stylus Office SX600FW
+		Epson Stylus Office TX300F
+		Epson Stylus Office TX600FW
+		Epson Stylus SX200
+		Epson Stylus SX205
+		Epson Stylus SX400
+		Epson Stylus SX405
+		Epson Stylus TX200
+		Epson Stylus TX400
+		Epson ME Office 70
+		Epson ME Office 80W
+		Epson ME Office 700FW
+		Epson WorkForce 30
+		Epson WorkForce 40
+		Epson WorkForce 500
+		Epson WorkForce 600
+
+	   2) Experimental support for the following printers.  These printers
+	      may not function correctly, and may be retuned for improved
+	      quality or performance in future releases.
+
+	      Epson inkjet printers:
+
+		Epson Artisan 700
+		Epson Artisan 800
+		Epson Stylus NX100
+		Epson Stylus NX300
+		Epson Stylus PX700FW
+		Epson Stylus PX800FW
+		Epson Stylus S20
+		Epson Stylus SX100
+		Epson Stylus SX105
+		Epson Stylus T20
+		Epson Stylus TX100
+		Epson Stylus Photo TX700W
+		Epson Stylus Photo TX800W
+
+2008-10-12	<rlk@sourceforge.net>
+
+	Files:	po/da.po (1.92) (+81 -183)
+		po/nl.po (1.75) (+98 -237)
+
+	Update Dutch and Danish translations
+
+2008-10-11	<rlk@sourceforge.net>
+
+	Files:	src/foomatic/foomatic-printermap (1.178) (+1 -0)
+		src/xml/printers.xml (1.18) (+2 -1)
+
+	Add Epson DX9400F
+
+2008-10-06	<rlk@sourceforge.net>
+
+	Files:	Makefile.am (1.154) (+13 -1)
+
+	Install ChangeLog, NEWS, AUTHORS, COPYING, and README into
+	documentation.
+
+===============================================================================
+Name: gutenprint-5_2_0-rc1
+
+2008-10-05	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.395) (+0 -4)
+
+	CUPS progress messages on OS X do not appear to be fully fixed.
+
+2008-10-04	<rlk@sourceforge.net>
+
+	Files:	po/cs.po (1.52) (+1 -1)
+		po/da.po (1.91) (+1 -1)
+		po/de.po (1.66) (+1 -1)
+		po/el.po (1.67) (+1 -1)
+		po/en_GB.po (1.160) (+1 -1)
+		po/es.po (1.65) (+1 -1)
+		po/fr.po (1.93) (+1 -1)
+		po/hu.po (1.24) (+1 -1)
+		po/ja.po (1.61) (+1 -1)
+		po/nb.po (1.26) (+1 -1)
+		po/nl.po (1.74) (+1 -1)
+		po/pl.po (1.71) (+1 -1)
+		po/pt.po (1.66) (+1 -1)
+		po/sk.po (1.70) (+1 -1)
+		po/sv.po (1.96) (+2 -2)
+		po/zh_TW.po (1.26) (+1 -1)
+
+	Gutenprint 5.2.0-rc1 release
+
+2008-10-04	<rlk@sourceforge.net>
+
+	Files:	src/cups/rastertoprinter.c (1.136) (+7 -5)
+
+	ATTR messages shouldn't be printed when suppress_messages is in
+	effect.
+
+2008-10-03	<easysw@sourceforge.net>
+
+	Files:	src/cups/rastertoprinter.c (1.135) (+5 -5)
+
+	Sigh...  Need to pass message catalog to stp_i18n_printf(), and between the
+	compiler not erroring out and the verbosity of the build I did not see the
+	warning...
+
+2008-10-03	<easysw@sourceforge.net>
+
+	Files:	src/cups/rastertoprinter.c (1.134) (+6 -6)
+
+	Use stp_i18n_printf() for INFO: messages, otherwise they won't be localized.
+
+2008-10-03	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.394) (+5 -1)
+
+	Force stderr to be unbuffered to ensure status messages get reported
+	on OS X.
+
+2008-10-03	<easysw@sourceforge.net>
+
+	Files:	src/cups/rastertoprinter.c (1.133) (+9 -2)
+
+	Don't buffer stderr so we get progress updates.
+
+2008-09-29	<rlk@sourceforge.net>
+
+	Files:	src/xml/escp2/model/Makefile.am (1.8) (+3 -2)
+
+	Don't remove model_92 from the distribution even though it's currently
+	not used; it will cause confusion at a later date.
+
+2008-09-28	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.393) (+24 -2)
+		src/xml/escp2/model/Makefile.am (1.7) (+2 -3)
+		src/xml/printers.xml (1.17) (+4 -4)
+
+	Fix colors at 720 DPI and below on more Epson printers
+
+2008-09-28	<rlk@sourceforge.net>
+
+	Files:	src/xml/escp2/model/model_65.xml (1.12) (+4 -12)
+
+	Redo fix 2034454 Epson DX7400 colours wrong below 1440dpi
+
+2008-09-25	<rlk@sourceforge.net>
+
+	Files:	src/cups/genppd.c (1.170) (+365 -466)
+
+	Revert to 5.2.0-beta4 version.
+
+2008-09-22	<rlk@sourceforge.net>
+
+	Files:	src/cups/cups-genppdupdate.in (1.53) (+3 -1)
+
+	Function correctly if there is no driver_bin installed but one is
+	specified on the command line.
+
+2008-09-22	<easysw@sourceforge.net>
+
+	Files:	src/cups/Makefile.am (1.118) (+4 -4)
+
+	Get po files from srcdir...
+
+2008-09-20	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.392) (+164 -10)
+		README (1.195) (+7 -0)
+		README.package (1.2) (+102 -23)
+
+	Release note updates
+
+2008-09-20	<rlk@sourceforge.net>
+
+	Files:	src/cups/cups-genppdupdate.in (1.52) (+14 -4)
+
+	Preserve original language in *StpLocale when updating a PPD file, to
+	allow -loriginal to return to original language.
+
+2008-09-20	<rlk@sourceforge.net>
+
+	Files:	src/cups/genppd.c (1.169) (+466 -365)
+
+	Accept driver syntax in genppd.
+
+2008-09-17	<mbroughtn@sourceforge.net>
+
+	Files:	man/cups-genppd.8.in (1.6) (+2 -2)
+
+	Correct example.  Model lists now show Epson rather than EPSON printers.
+
+2008-09-17	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.391) (+7 -0)
+		doc/gutenprint-users-manual.odt (1.4) (+495 -479)
+		doc/gutenprint-users-manual.pdf (1.4) (+2896 -2908)
+
+	Miscellaneous updates
+
+2008-09-13	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.390) (+1 -1)
+		doc/gutenprint-users-manual.odt (1.3) (+744 -1064)
+		doc/gutenprint-users-manual.pdf (1.3) (+3793 -4813)
+		src/foomatic/foomatic-generator.in (1.65) (+41 -24)
+		src/foomatic/printers.c (1.12) (+2 -1)
+
+	Update manual and release notes.
+
+2008-09-13	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.389) (+849 -1152)
+
+	Start prep for 5.2 release.
+
+2008-09-13	<rlk@sourceforge.net>
+
+	Files:	configure.ac (1.203) (+3 -3)
+
+	Bump version
+
+2008-09-09	<rlk@sourceforge.net>
+
+	Files:	src/xml/printers.xml (1.16) (+3 -3)
+
+	Fix the DX8400/DX8450 in addition to the CX8400.
+
+2008-09-03	<rlk@sourceforge.net>
+
+	Files:	src/xml/escp2/model/model_91.xml (1.7) (+1 -1)
+
+	Fix CD position for R1900.
+
+2008-08-20	<rlk@sourceforge.net>
+
+	Files:	src/cups/rastertoprinter.c (1.132) (+12 -9)
+
+	More correct way of specifying page dimensions.
+
+2008-08-20	<rlk@sourceforge.net>
+
+	Files:	src/cups/test-rastertogutenprint.in (1.11) (+3 -1)
+
+	Add -o option to specify command line options.
+
+2008-08-20	<rlk@sourceforge.net>
+
+	Files:	src/main/channel.c (1.30) (+14 -8)
+
+	Only retrieve the cyan, magenta, and yellow balances once rather than
+	each time through the loop.
+
+2008-08-20	<rlk@sourceforge.net>
+
+	Files:	src/cups/test-rastertogutenprint.in (1.10) (+40 -7)
+
+	Add -m argument to generate MD5 checksums.
+
+	Add -O argument to generate output.
+
+	Add -n argument to optionally not create PPD files.
+
+2008-08-20	<rlk@sourceforge.net>
+
+	Files:	src/cups/rastertoprinter.c (1.131) (+15 -3)
+
+	[ 2058858 ] HP 870 truncates legal page
+
+	Print Gutenprint error messages as errors rather than as debug2's.
+
+	Fix is to explicitly set the page height and width in addition to the
+	page size.  This is an undocumented API wart that we should fix at
+	some point.
+
+===============================================================================
+Name: gutenprint-5_2_0-beta4
+
+2008-08-18	<rlk@sourceforge.net>
+
+	Files:	po/cs.po (1.51) (+2922 -2899)
+		po/da.po (1.90) (+3065 -2945)
+		po/de.po (1.65) (+2933 -2910)
+		po/el.po (1.66) (+2923 -2900)
+		po/en_GB.po (1.159) (+2914 -2878)
+		po/es.po (1.64) (+2922 -2899)
+		po/fr.po (1.92) (+2927 -2889)
+		po/hu.po (1.23) (+2927 -2889)
+		po/ja.po (1.60) (+2922 -2899)
+		po/nb.po (1.25) (+2924 -2900)
+		po/nl.po (1.73) (+3099 -2960)
+		po/pl.po (1.70) (+2923 -2900)
+		po/pt.po (1.65) (+2923 -2900)
+		po/sk.po (1.69) (+2922 -2899)
+		po/sv.po (1.95) (+2928 -2890)
+		po/zh_TW.po (1.25) (+2919 -2898)
+
+	Gutenprint 5.2.0-beta4 release
+
+2008-08-18	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.388) (+6 -0)
+		src/main/print-ps.c (1.101) (+58 -21)
+		src/main/xmlppd.c (1.3) (+17 -0)
+
+	[ 1973668 ] Print preview does not correctly handle absence of PPD
+
+2008-08-16	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.387) (+40 -39)
+		README (1.194) (+2 -2)
+		src/foomatic/foomatic-printermap (1.177) (+1 -0)
+		src/xml/printers.xml (1.15) (+2 -1)
+
+	Add Epson CX5500.
+
+	Drop support for OS X 10.2.
+
+2008-08-16	<rlk@sourceforge.net>
+
+	Files:	src/cups/i18n.c (1.6) (+3 -3)
+
+	Fix minor typo.
+
+2008-08-16	<easysw@sourceforge.net>
+
+	Files:	src/cups/i18n.c (1.5) (+12 -8)
+
+	Clean up fuzzy translation check, since "fuzzy" doesn't have to be the
+	first flag on the comment line.  Still need to decide if this is the right
+	thing to do or change the msgmerge options to not add fuzzies in the first
+	place...
+
+2008-08-16	<rlk@sourceforge.net>
+
+	Files:	src/cups/i18n.c (1.4) (+10 -4)
+
+	Don't translate fuzzy translations.
+
+2008-08-16	<rlk@sourceforge.net>
+
+	Files:	src/cups/Makefile.am (1.117) (+2 -2)
+
+	Fix syntax error.
+
+2008-08-16	<easysw@sourceforge.net>
+
+	Files:	src/cups/Makefile.am (1.116) (+1 -4)
+
+	Drop old reference to cups_bundledir...
+
+2008-08-15	<rlk@sourceforge.net>
+
+	Files:	src/cups/Makefile.am (1.115) (+4 -4)
+
+	Distribute i18n.h.
+
+2008-08-14	<tillkamppeter@sourceforge.net>
+
+	Files:	src/xml/printers.xml (1.14) (+16 -16)
+
+	Replaced more "Okidata" by "Oki", to assure that also CUPS Raster PPDs use "Oki" as manufacturer name.
+
+2008-08-14	<rlk@sourceforge.net>
+
+	Files:	src/cups/test-rastertogutenprint.in (1.9) (+2 -0)
+
+	Build PPD files before running.
+
+2008-08-14	<rlk@sourceforge.net>
+
+	Files:	src/foomatic/foomatic-printermap (1.176) (+15 -15)
+
+	Change Okidata to Oki per Till.
+
+2008-08-14	<rlk@sourceforge.net>
+
+	Files:	src/cups/Makefile.am (1.114) (+19 -9)
+		src/cups/cups-genppdupdate.in (1.51) (+7 -2)
+
+	Correctly install PPD files when required
+
+2008-08-14	<easysw@sourceforge.net>
+
+	Files:	src/cups/genppd.c (1.168) (+6 -3)
+
+	Re-commit LanguageEncoding fix (Robert is just too fast for me... :)
+
+2008-08-14	<rlk@sourceforge.net>
+
+	Files:	src/main/print-olympus.c (1.89) (+4 -1)
+
+	Comment out duplicate paper size for Sony UPDP10.
+
+2008-08-14	<rlk@sourceforge.net>
+
+	Files:	src/cups/genppd.c (1.167) (+4 -3)
+
+	Ensure that we don't accidentally get a duplicate resolution
+
+2008-08-14	<rlk@sourceforge.net>
+
+	Files:	configure.ac (1.202) (+3 -2)
+		src/cups/Makefile.am (1.113) (+4 -4)
+
+	Check correctly for libiconv
+
+2008-08-14	<rlk@sourceforge.net>
+
+	Files:	src/xml/escp2/media/f360_ultrachrome_k3.xml (1.9) (+0 -63)
+
+	Remove duplicate definitions of Watercolor paper
+
+2008-08-13	<easysw@sourceforge.net>
+
+	Files:	src/cups/Makefile.am (1.112) (+4 -4)
+		src/cups/genppd.c (1.166) (+22 -22)
+		src/cups/i18n.c (1.3) (+4 -10)
+
+	Fix localization issues.
+
+2008-08-13	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.386) (+3 -3)
+
+	Update note about how translations are done.
+
+2008-08-13	<rlk@sourceforge.net>
+
+	Files:	src/cups/i18n.c (1.2) (+10 -3)
+
+	Add strlcpy function implementation.
+
+2008-08-13	<rlk@sourceforge.net>
+
+	Files:	src/xml/escp2/model/Makefile.am (1.6) (+3 -2)
+
+	Add model 92 to the Makefile.
+
+2008-08-13	<easysw@sourceforge.net>
+
+	Files:	configure.ac (1.201) (+2 -24)
+		include/gutenprint/gutenprint-intl-internal.h (1.4) (+9 -24)
+		include/gutenprint/gutenprint-intl.h (1.5) (+13 -29)
+		m4/stp_cups.m4 (1.11) (+0 -8)
+		po/Makevars (1.4) (+0 -12)
+		src/cups/Makefile.am (1.111) (+28 -72)
+		src/cups/genppd.c (1.165) (+70 -180)
+		src/cups/i18n.c (1.1) (added)
+		src/cups/i18n.h (1.1) (added)
+		src/cups/po2strings.c (1.3) (removed)
+		src/cups/rastertoprinter.c (1.130) (+39 -44)
+		src/main/Makefile.am (1.103) (+1 -2)
+		src/main/intl.c (1.12) (removed)
+
+	Revamp PPD and CUPS raster driver localization code to use our own loader
+	and remove the old bits.
+
+2008-08-13	<rlk@sourceforge.net>
+
+	Files:	README (1.193) (+6 -5)
+
+	Update configuration output block.
+
+2008-08-13	<rlk@sourceforge.net>
+
+	Files:	README (1.192) (+88 -42)
+
+	Add some more info about CUPS driver.
+
+2008-08-13	<rlk@sourceforge.net>
+
+	Files:	README (1.191) (+0 -5)
+
+	Remove reference to CUPS back ends
+
+2008-08-13	<rlk@sourceforge.net>
+
+	Files:	Makefile.am (1.153) (+2 -2)
+
+	Distribute README.package for packagers.
+
+2008-08-13	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.385) (+3 -2)
+
+	Minor updates.
+
+2008-08-13	<rlk@sourceforge.net>
+
+	Files:	README (1.190) (+10 -23)
+
+	Remove most references to Gimp-Print 4.2.
+
+2008-08-12	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.384) (+32 -13)
+

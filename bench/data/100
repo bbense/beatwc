@@ -1,0 +1,100 @@
+===============================================================================
+Name: gutenprint-5_2_3
+
+2008-12-22	<rlk@sourceforge.net>
+
+	Files:	po/cs.po (1.55) (+3374 -3236)
+		po/da.po (1.96) (+3376 -3234)
+		po/de.po (1.69) (+3371 -3235)
+		po/el.po (1.70) (+3374 -3236)
+		po/en_GB.po (1.163) (+3376 -3234)
+		po/es.po (1.68) (+3374 -3236)
+		po/fr.po (1.96) (+3376 -3234)
+		po/hu.po (1.27) (+3376 -3234)
+		po/it.po (1.5) (+3376 -3234)
+		po/ja.po (1.64) (+3374 -3236)
+		po/nb.po (1.29) (+3375 -3235)
+		po/nl.po (1.79) (+3376 -3234)
+		po/pl.po (1.74) (+3374 -3236)
+		po/pt.po (1.69) (+3374 -3236)
+		po/sk.po (1.73) (+3374 -3236)
+		po/sv.po (1.99) (+3375 -3235)
+		po/zh_TW.po (1.29) (+3374 -3234)
+
+	Gutenprint 5.2.3 release
+
+2008-12-21	<rlk@sourceforge.net>
+
+	Files:	src/escputil/d4lib.c (1.11) (+147 -25)
+		src/escputil/d4lib.h (1.5) (+5 -1)
+		src/escputil/escputil.c (1.99) (+63 -103)
+
+	Fix escputil for NX100 (needs code review)
+
+2008-12-21	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.409) (+4 -0)
+
+	Add support for Canon MP220 and iP4600.
+
+2008-12-21	<faust3@sourceforge.net>
+
+	Files:	src/main/canon-printers.h (1.49) (+1 -1)
+
+	also enable the iP4600 specific paper list
+
+2008-12-21	<faust3@sourceforge.net>
+
+	Files:	src/main/canon-media.h (1.12) (+47 -24)
+
+	Added an iP4600 paper list and also added another paper specific value for the P command
+	patch by Richard Collins <the.hungarian at gmail.com>
+
+2008-12-21	<faust3@sourceforge.net>
+
+	Files:	src/main/canon-media.h (1.11) (+9 -0)
+		src/main/canon-printers.h (1.48) (+1 -1)
+
+	Added an iP4600 specific slot list
+	patch by Richard Collins <the.hungarian at gmail.com>
+
+2008-12-21	<faust3@sourceforge.net>
+
+	Files:	test/pixma_parse.c (1.15) (+1 -1)
+
+	Avoid division by zero when bpp is 0
+	patch by Richard Collins <the.hungarian at gmail.com>
+
+2008-12-21	<faust3@sourceforge.net>
+
+	Files:	src/main/canon-inks.h (1.23) (+105 -0)
+
+	Added support for a few more inksets that are required for better iP4600 support
+	patch by
+	Richard Collins <the.hungarian at gmail.com>
+
+2008-12-21	<faust3@sourceforge.net>
+
+	Files:	src/foomatic/foomatic-printermap (1.184) (+1 -0)
+		src/main/canon-printers.h (1.47) (+56 -0)
+		src/main/print-canon.c (1.230) (+9 -9)
+		src/xml/printers.xml (1.28) (+2 -1)
+
+	Initial support for the Canon PIXMA iP4600
+	patch by Bernd Ernesti <veego at users.sourceforge.net>
+	(#2447389)
+
+2008-12-21	<faust3@sourceforge.net>
+
+	Files:	src/foomatic/foomatic-printermap (1.183) (+1 -0)
+		src/xml/printers.xml (1.27) (+2 -1)
+
+	According to Alec de Zegher <alec at alecweb.be> the MP220 works with
+	the MP180 driver.
+
+2008-12-21	<rlk@sourceforge.net>
+
+	Files:	NEWS (1.408) (+33 -21)
+		README (1.199) (+13 -13)
+		configure.ac (1.209) (+4 -4)
+

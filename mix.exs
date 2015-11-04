@@ -27,6 +27,6 @@ defmodule Beatwc.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:benchfella, "~> 0.2.1"}]
+    [{:benchfella, git: "https://github.com/alco/benchfella.git"}]
   end
 end
