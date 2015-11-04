@@ -16,11 +16,18 @@ defmodule Beatwc do
     path |> File.stream! |> Enum.count
   end
 
+  # The :binary functions split and replace are not nifs. 
   def slurp(path) do
     bin = File.read!(path)
     search = :binary.compile_pattern(<<"\n">>)
     new_bin = :binary.replace(bin,search,<<"">>,[:global])
     :erlang.byte_size(bin) - :erlang.byte_size(new_bin)
+  end 
+
+  def allnifs(path) do
+    bin = File.read!(path)
+    search = :binary.compile_pattern(<<"\n">>)
+    :erlang.length(:binary.matches(bin,search))
   end 
   
 end

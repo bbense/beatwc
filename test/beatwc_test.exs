@@ -9,4 +9,8 @@ defmodule BeatwcTest do
   test "naive gets the same answer" do
   	assert Beatwc.naive("README.md") == Beatwc.wc_l("README.md")
   end 
+
+  test "allnifs gets the same answer" do
+  	assert Beatwc.allnifs("README.md") == Beatwc.wc_l("README.md")
+  end 
 end
