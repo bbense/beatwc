@@ -27,7 +27,7 @@ Results so far:
     wc_l file with 1_000_000 lines                50   31361.00 µs/op
     allnifs file with 100_000 lines               20   91678.35 µs/op
     slurp file with 100_000 lines                 10   103677.20 µs/op
-    naive file with 100_000lines                  10   118839.30 µs/op
+    naive file with 100_000 lines                 10   118839.30 µs/op
     chunkynifs file with 1_000_000 lines           5   286391.60 µs/op
     naive file with 1_000_000 lines                1   1189603.00 µs/op
     allnifs file with 1_000_000 lines              1   13899786.00 µs/op
