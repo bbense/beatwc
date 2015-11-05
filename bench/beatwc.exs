@@ -31,4 +31,13 @@ defmodule BenchBeatwc do
     end
   end 
 
+  for chunk <- @data_files do 
+    @chunk chunk 
+    bench "chunkynifs file with #{@chunk} lines" do
+      Beatwc.chunkynifs("./bench/data/#{@chunk}") 
+    end
+  end 
+
+
+
 end
