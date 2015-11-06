@@ -17,4 +17,8 @@ defmodule BeatwcTest do
   test "chunkynifs gets the same answer" do
   	assert Beatwc.chunkynifs("./bench/data/1000000") == Beatwc.wc_l("./bench/data/1000000")
   end 
+
+  test "parallel gets the same answer" do
+  	assert Beatwc.parallel("./bench/data/1000000") == Beatwc.wc_l("./bench/data/1000000")
+  end 
 end

@@ -6,6 +6,7 @@ defmodule Beatwc do
 
   # Best guess so far. 
   @too_big 300000
+  @pchunk_size 100000
 
   def wc_l(path) do 
     {result, 0} = System.cmd("wc",["-l", path])
@@ -42,6 +43,20 @@ defmodule Beatwc do
       allnifs(path)
     end 
   end
+
+  def parallel(path) do
+    %{ size: size } = File.stat!(path)
+    if size > @too_big do
+      pchunk(path)
+    else
+      allnifs(path)
+    end 
+  end
+
+  defp pchunk(path) do
+    File.stream!(path,[],@pchunk_size)
+    |> EnumP.scatter(fn(chunk) -> count(chunk) end) |> EnumP.gather(0, fn(acc, result) -> result + acc end) 
+  end 
 
   defp chunk(path) do
     File.stream!(path,[],@too_big)
