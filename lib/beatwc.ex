@@ -6,7 +6,8 @@ defmodule Beatwc do
 
   # Best guess so far.
   @too_big 300000
-  @pchunk_size 100000
+  @pchunk_size 131072
+  @chunk_size 32768
 
   def wc_l(path) do
     {result, 0} = System.cmd("wc",["-l", path])
@@ -35,7 +36,7 @@ defmodule Beatwc do
     :erlang.length(:binary.matches(binary, search))
   end
 
-  def chunkynifs(path, chunksize \\ @too_big) do
+  def chunkynifs(path, chunksize \\ @chunk_size) do
     %{ size: size } = File.stat!(path)
     if size > @too_big do
       chunk(path, chunksize)
