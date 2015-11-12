@@ -1,11 +1,11 @@
 defmodule EnumP do
 	@moduledoc """
 	Apply the vector machine notices of Scatter/Gather to running
-	a function on each value of an enumerable. 
+	a function on each value of an enumerable.
 	"""
 
 	@doc """
-	Start a process that calls function(item) for each value in an Enumerable. 
+	Start a process that calls function(item) for each value in an Enumerable.
 
 	"""
 	def scatter(enum, function) do
@@ -15,11 +15,11 @@ defmodule EnumP do
 
   @doc """
   Gather all the results of a scatter into a single value using the initial_value
-  and accumilator function. 
+  and accumilator function.
 
   """
-  def gather([],initial_value, _acc_function) do
-    initial_value
+  def gather([], final_value, _acc_function) do
+     final_value
   end
 
 	def gather(pid_list, initial_value, acc_function) do
@@ -28,10 +28,10 @@ defmodule EnumP do
     gather(still_running,new_value, acc_function)
   end
 
-	defp parse_yield(pid,{results, still_running}) do
+	defp parse_yield(pid, {results, still_running}) do
 		case Task.yield(pid) do
 			{:ok, result} -> {results ++ [result], still_running }
 			nil -> {results, still_running ++ [pid]}
-    end 
+    end
 	end
 end
