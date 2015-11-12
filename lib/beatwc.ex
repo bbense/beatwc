@@ -37,21 +37,11 @@ defmodule Beatwc do
   end
 
   def chunkynifs(path, chunksize \\ @chunk_size) do
-    %{ size: size } = File.stat!(path)
-    if size > @too_big do
       chunk(path, chunksize)
-    else
-      allnifs(path)
-    end
   end
 
   def parallel(path, chunksize \\ @pchunk_size) do
-    %{ size: size } = File.stat!(path)
-    if size > @too_big do
       pchunk(path, chunksize)
-    else
-      allnifs(path)
-    end
   end
 
   defp pchunk(path, chunksize) do
