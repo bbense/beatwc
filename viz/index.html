@@ -96,7 +96,7 @@ var svg = d3.select("body").append("svg")
 
 svg.call(tip);
 
-d3.tsv("method_data.tsv", type, function(error, data) {
+d3.csv("method_data.csv", type, function(error, data) {
   x.domain(data.map(function(d) { return d.algorithm; }));
   y.domain([0, d3.max(data, function(d) { return d.time1; })]);
 
@@ -133,13 +133,14 @@ function type(d) {
   return d;
 }
 
+
 </script>
 
 <div style="font-size:14px;font-family:sans-serif">
-<input type="button" onclick="alert('Hello World!')" value="100 Lines">
-<input type="button" onclick="alert('Hello World!')" value="1000 Lines">
-<input type="button" onclick="alert('Hello World!')" value="10K Lines">
-<input type="button" onclick="alert('Hello World!')" value="100K Lines">
-<input type="button" onclick="alert('Hello World!')" value="1000K Lines">
+<input type="button" onclick="updateData(1)" value="100 Lines">
+<input type="button" onclick="updateData(2)" value="1000 Lines">
+<input type="button" onclick="updateData(3)" value="10K Lines">
+<input type="button" onclick="updateData(4)" value="100K Lines">
+<input type="button" onclick="updateData(5)" value="1000K Lines">
 
 </div>
