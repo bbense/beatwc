@@ -85,7 +85,7 @@ var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
-    return "<strong>Time:</strong> <span style='color:red'>" + d.time1 + "</span>";
+    return "<strong>Time:</strong> <span style='color:red'>" + d.time3 + "</span>";
   })
 
 var svg = d3.select("body").append("svg")
@@ -98,7 +98,7 @@ svg.call(tip);
 
 d3.csv("method_data.csv", type, function(error, data) {
   x.domain(data.map(function(d) { return d.algorithm; }));
-  y.domain([0, d3.max(data, function(d) { return d.time1; })]);
+  y.domain([0, d3.max(data, function(d) { return d.time3; })]);
 
   svg.append("g")
       .attr("class", "x axis")
@@ -121,15 +121,15 @@ d3.csv("method_data.csv", type, function(error, data) {
       .attr("class", "bar")
       .attr("x", function(d) { return x(d.algorithm); })
       .attr("width", x.rangeBand())
-      .attr("y", function(d) { return y(d.time1); })
-      .attr("height", function(d) { return height - y(d.time1); })
+      .attr("y", function(d) { return y(d.time3); })
+      .attr("height", function(d) { return height - y(d.time3); })
       .on('mouseover', tip.show)
       .on('mouseout', tip.hide)
 
 });
 
 function type(d) {
-  d.time1 = +d.time1;
+  d.time3 = +d.time3;
   return d;
 }
 
@@ -144,4 +144,3 @@ function type(d) {
 <input type="button" onclick="location.href='file1000K.html'" value="1000K Lines">
 
 </div>
-
