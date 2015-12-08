@@ -30,14 +30,17 @@
         <h3>
 <a id="beatwc" class="anchor" href="#beatwc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Beating <code>System.cmd("wc",["-l", file])</code> with native Elixir code</h3>
 
-<p>This project is an attempt to teach about performance in parsing text files in Elixir by using a silly example
-that came up on the elixir-lang mailing list. It was a question about parsing the output of a <code>System.cmd</code> call and using that verses just calling <code>File.stream!("file") |> Enum.count</code></p>
-
 <h3>
-<a id="know-the-enemy" class="anchor" href="#know-the-enemy" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="enemy.html">Know the Enemy=</a></h3>
+<a id="know-the-enemy" class="anchor" href="#know-the-enemy" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="enemy.html">Know the Enemy</a></h3>
 
 <h3>
 <a id="naive" class="anchor" href="#naive" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="naive.html">Naive File.Stream!</a></h3>
+<code><pre>
+  def naive(path) do
+    path |> File.stream! |> Enum.count
+  end
+</pre>
+</code>
 
 <h3>
 <a id="slurp" class="anchor" href="#slurp" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="slurp.html">First pass at slurp with :binary functions</a></h3>
