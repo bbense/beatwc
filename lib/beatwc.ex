@@ -37,21 +37,13 @@ defmodule Beatwc do
   end
 
   def chunkynifs(path, chunksize \\ @chunk_size) do
-      chunk(path, chunksize)
+    File.stream!(path, [], chunksize)
+    |> Enum.reduce(0, fn(chunk, total) -> total + count(chunk) end)
   end
 
   def parallel(path, chunksize \\ @pchunk_size) do
-      pchunk(path, chunksize)
-  end
-
-  defp pchunk(path, chunksize) do
     File.stream!(path,[], chunksize)
     |> EnumP.scatter(fn(chunk) -> count(chunk) end) |> EnumP.gather(0, fn(acc, result) -> result + acc end)
-  end
-
-  defp chunk(path, chunksize) do
-    File.stream!(path, [], chunksize)
-    |> Enum.reduce(0, fn(chunk, total) -> total + count(chunk) end)
   end
 
   defp count(binary) do
