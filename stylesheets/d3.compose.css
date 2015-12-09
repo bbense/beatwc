@@ -4,7 +4,7 @@
  */
 
 .chart-compose {
-  font-size: 14px;
+  font-size: 10px;
   background-color: #fff;
   border: solid 1px #ddd;
 }
@@ -50,7 +50,7 @@
 }
 
 .chart-line {
-  stroke-width: 1.5px;
+  stroke-width: 1.0px;
   fill: none;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .chart-label-text {
-  font-size: 0.85em;
+  font-size: 0.65em;
   stroke: none;
   fill: black;
 }
@@ -72,23 +72,23 @@
 }
 
 .chart-title {
-  font-size: 1.2em;
+  font-size: 0.85em;
   font-weight: bold;
 }
 
 .chart-axis-title {
-  font-size: 1.1em;
+  font-size: 0.65em;
   font-weight: bold;
 }
 
 .chart-axis path {
   fill: none;
-  stroke-width: 2px;
+  stroke-width: 1px;
   stroke: black;
 }
 
 .chart-axis .tick {
-  font-size: 0.9em;
+  font-size: 0.3em;
 }
 
 .chart-axis .tick line,
@@ -97,7 +97,7 @@
 }
 
 .chart-legend-label {
-  font-size: 0.9em;
+  font-size: 0.5em;
 }
 
 .chart-gridline {
