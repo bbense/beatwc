@@ -45,6 +45,153 @@
 </pre>
 </code>
 
+ <div id="chart"></div>
+
+    <script src="javascripts/d3.min.js"></script>
+    <script src="javascripts/d3.chart.js"></script>
+
+    <script src="javascripts/d3.compose-all.min.js"></script>
+
+    <script type="text/javascript">
+
+    { "data": [
+    {
+      "key": "a",
+      "name": "A",
+      "values": [
+        {
+          "x": 0,
+          "y": 22
+        },
+        {
+          "x": 10,
+          "y": 9
+        },
+        {
+          "x": 20,
+          "y": 9
+        },
+        {
+          "x": 30,
+          "y": 9
+        },
+        {
+          "x": 40,
+          "y": 14
+        },
+        {
+          "x": 50,
+          "y": 22
+        },
+        {
+          "x": 60,
+          "y": 10
+        },
+        {
+          "x": 70,
+          "y": 7
+        },
+        {
+          "x": 80,
+          "y": 15
+        },
+        {
+          "x": 90,
+          "y": 18
+        },
+        {
+          "x": 100,
+          "y": 22
+        }
+      ]
+    },
+    {
+      "key": "b",
+      "name": "B",
+      "values": [
+        {
+          "x": 0,
+          "y": 25
+        },
+        {
+          "x": 10,
+          "y": 52
+        },
+        {
+          "x": 20,
+          "y": 73
+        },
+        {
+          "x": 30,
+          "y": 88
+        },
+        {
+          "x": 40,
+          "y": 97
+        },
+        {
+          "x": 50,
+          "y": 100
+        },
+        {
+          "x": 60,
+          "y": 97
+        },
+        {
+          "x": 70,
+          "y": 88
+        },
+        {
+          "x": 80,
+          "y": 73
+        },
+        {
+          "x": 90,
+          "y": 52
+        },
+        {
+          "x": 100,
+          "y": 25
+        }
+      ]
+    }
+  ],
+  "include": {
+    "title": true
+  },
+  "title": {
+    "text": "Horizontal Bars"
+  }
+}
+d3.select('#chart').chart('Compose', function(options) {
+  var scales = {
+    x: {type: 'ordinal', data: options.data, key: 'x', adjacent: true},
+    y: {domain: [0, 120]}
+  };
+
+  var charts = [
+    d3c.horizontalBars('results', {
+      data: options.data,
+      xScale: scales.x,
+      yScale: scales.y,
+      duration: 1000
+    })
+  ];
+
+  var title = d3c.title(options.title.text);
+  var xAxis = d3c.axis('xAxis', {scale: scales.x, ticks: 5, duration: 1000});
+  var yAxis = d3c.axis('yAxis', {scale: scales.y, ticks: 5, duration: 1000});
+  var legend = d3c.legend('legend', {charts: ['results'], centered: true});
+
+  return [
+    title,
+    [xAxis, d3c.layered(charts)],
+    yAxis,
+    legend
+  ];
+});
+</script>
+
 <h3>
 <a id="naive" class="anchor" href="#naive" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="naive.html">Naive File.Stream!</a></h3>
 
