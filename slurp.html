@@ -46,7 +46,10 @@
     new_bin = :binary.replace(bin,search,<<"">>,[:global])
     :erlang.byte_size(bin) - :erlang.byte_size(new_bin)
   end
-</pre></code>
+</pre>
+<h4>
+<a id="slurp_results" class="anchor" href="#slurp_results" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="graph2.html">Timing Results</a></h4>
+</code>
 <h3>
 <a id="all-nifs" class="anchor" href="#all-nifs" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="nif.html">File slurping with only NIF functions from :binary</a></h3>
 
