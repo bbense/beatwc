@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- ... -->
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/d3.compose.css">
+
+    <!-- ... -->
+
+    <script src="javascripts/d3.v3.min.js"></script>
+    <script src="javascripts/d3.chart.js"></script>
+
+    <script src="javascripts/d3.compose-all.js"></script>
+    <script src="data.js"></script>
+
+ </head>
+  <body>
+    <!-- Your code -->
+
+
+  <section class="example">
+      <h2>wc -l vs parallel chunky nifs</h2>
+      <div id="chart-6"></div>
+
+      <script type="text/javascript">
+        var chart_5 = d3.select('#chart-6')
+          .chart('Compose', function(data) {
+            var scales = {
+              x: {type: 'ordinal', data: data, value: function(d, i) { return i; }, adjacent: true},
+              y: {data: data, value: function(d, i) { return d; }}
+            };
+            var charts = [
+              d3c.horizontalBars('bars', {
+                data: data,
+                xScale: scales.x,
+                yScale: scales.y,
+                labels: {format: d3.format(',0d'), position: 'right|left', offset: 3}
+              })
+            ];
+
+            return [
+              d3c.title('Avg Execution Time in Microseconds'),
+              [
+                d3c.layered(charts)
+              ],
+              d3c.axis({scale: scales.y}),
+              d3c.axisTitle('Time in Microseconds')
+            ];
+          })
+          .width(300)
+          .height(200)
+          .margins({right: 50, left: 50})
+          .duration(1000)
+          .delay(200);
+        chart_5.draw(data['chart-7']);
+      </script>
+    </section>
+
+
+    </script>
+
+  </body>
+</html>
