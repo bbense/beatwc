@@ -35,12 +35,6 @@
 
 <h3>
 <a id="naive" class="anchor" href="#naive" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="naive.html">Naive File.Stream!</a></h3>
-<code><pre>
-  def naive(path) do
-    path |> File.stream! |> Enum.count
-  end
-</pre>
-</code>
 
 <h3>
 <a id="slurp" class="anchor" href="#slurp" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="slurp.html">First pass at slurp with :binary functions</a></h3>
@@ -50,6 +44,18 @@
 
 <h3>
 <a id="chunky-nifs" class="anchor" href="#chunky-nifs" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="chunky-nifs.html">NIF functions from :binary with file chunking</a></h3>
+
+<code><pre>
+  def chunkynifs(path, chunksize \\ @chunk_size) do
+    File.stream!(path, [], chunksize)
+    |> Enum.reduce(0, fn(chunk, total) -> total + count(chunk) end)
+  end
+
+  defp count(binary) do
+    search = :binary.compile_pattern(<<"\n">>)
+    :erlang.length(:binary.matches(binary, search))
+  end
+</pre></code>
 
 <h3>
 <a id="parallel" class="anchor" href="#parallel" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="parallel.html">NIF functions from :binary with file chunking and parallel task execution</a></h3>
