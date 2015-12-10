@@ -51,7 +51,8 @@
 <code><pre>
   def parallel(path, chunksize \\ @pchunk_size) do
     File.stream!(path,[], chunksize)
-    |> EnumP.scatter(fn(chunk) -> count(chunk) end) |> EnumP.gather(0, fn(acc, result) -> result + acc end)
+    |> EnumP.scatter(fn(chunk) -> count(chunk) end)
+    |> EnumP.gather(0, fn(acc, result) -> result + acc end)
   end
 
   defp count(binary) do
