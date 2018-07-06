@@ -1,1 +1,5 @@
-%{"benchfella": {:hex, :benchfella, "0.2.1"}}
+%{
+  "benchfella": {:git, "https://github.com/alco/benchfella.git", "d4546fe801ca668794cf4e87b7f75825d6eb4239", []},
+  "flow": {:hex, :flow, "0.14.0", "a84a4afc8559e3eb9c3b73c7dd0b348817405f3208bb1a42cfea69a83ec17f35", [:mix], [{:gen_stage, "~> 0.14.0", [hex: :gen_stage, repo: "hexpm", optional: false]}], "hexpm"},
+  "gen_stage": {:hex, :gen_stage, "0.14.0", "65ae78509f85b59d360690ce3378d5096c3130a0694bab95b0c4ae66f3008fad", [:mix], [], "hexpm"},
+}
